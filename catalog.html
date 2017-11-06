@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
   </head>
+
   <body>
     <header>
-      <img src="img/logo.svg" alt="Логотип магазина Девайс"></div>
+      <a href=""><img src="img/logo.svg" alt="Логотип магазина Девайс"></a>
       <div class="header-top">
+        <form action="" method="post">
+          <input type="search" placeholder="Поиск по сайту">
+          <input type="submit" value="Найти">
+        </form>
         <ul>
-          <li>Поиск по сайту</li>
+          <li><a href="#">Войти</a></li>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
         </ul>
-        <ul>
-          <li>Валентин Петухов</li>
-          <li><a href="#">Выйти</a></li>
-        </ul>
-        <span><a href="#">Сравнить</a></span>
-        <span><a href="#">Корзина</a></span>
       </div>
       <ul class="main-menu">
         <li>
           <a href="#">Каталог товаров</a>
           <ul class="submenu">
-            <li>Виртуальная реальность</li>
-            <li>Фитнесс-браслеты</li>
-            <li>Квадрокоптеры</li>
-            <li>Моноподы для селфи</li>
-            <li>Умные часы</li>
-            <li>Экшн-камеры</li>
+            <li><a href="#">Виртуальная реальность</a></li>
+            <li><a href="#">Фитнесс-браслеты</a></li>
+            <li><a href="#">Квадрокоптеры</a></li>
+            <li><a href="#">Моноподы для селфи</a></li>
+            <li><a href="#">Умные часы</a></li>
+            <li><a href="#">Экшн-камеры</a></li>
           </ul>
-        </ul>
-        <li><a href="#">Доставка</a></ul>
-        <li><a href="#">Гарантия</a></ul>
-        <li><a href="#">Контакты</a></ul>
+        </li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
       </ul>
     </header>
 
@@ -50,7 +52,7 @@
         <label for="price">Стоимость</label>
         <input type="range" min="0" max="10000" step="500" id="price">
         
-        <span>Цвет<span>
+        <span>Цвет</span>
         <input type="checkbox" name="color" id="black"><label for="black">Черный</label>
         <input type="checkbox" name="color" id="white"><label for="white">Белый</label>
         <input type="checkbox" name="color" id="blue"><label for="blue">Синий</label>
@@ -102,7 +104,7 @@
     
     <footer>
       <div class="footer-top">
-        <span>Device</span>
+          <a href="" class="logo">Device</a>
         <ul>
           <li><a href="#">Войти</a></li>
           <li><a href="#">Сравнить</a></li>
@@ -118,9 +120,9 @@
         <a href="tel: +74954959595">Тел.: +7 (495) 495-95-95</a>
       
       <div class="footer-bottom">
-        <a href="#" class="button-social" rel="nofollow">Facebook</a>
-        <a href="#" class="button-social" rel="nofollow">Instagram</a>
-        <a href="#" class="button-social" rel="nofollow">Twitter</a>
+        <a href="#" class="button-social" rel="nofollow"><span>Facebook</span></a>
+        <a href="#" class="button-social" rel="nofollow"><span>Instagram</span></a>
+        <a href="#" class="button-social" rel="nofollow"><span>Twitter</span></a>
         <a class="developer" rel="nofollow">HTML-Academy</a>
       </div>
     </footer>
