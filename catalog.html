@@ -8,7 +8,7 @@
 
   <body>
     <header>
-      <a href=""><img src="img/logo.svg" alt="Логотип магазина Девайс"></a>
+      <a href="#"><img src="img/logo.svg" alt="Логотип магазина Девайс"></a>
       <div class="header-top">
         <form action="" method="post">
           <input type="search" placeholder="Поиск по сайту">
@@ -47,51 +47,65 @@
         <li>Моноподы для селфи</li>
       </ul>
 
-      <p>Фильтр</p>
-      <form action="#" method="get">
-        <label for="price">Стоимость</label>
-        <input type="range" min="0" max="10000" step="500" id="price">
-        
-        <span>Цвет</span>
-        <input type="checkbox" name="color" id="black"><label for="black">Черный</label>
-        <input type="checkbox" name="color" id="white"><label for="white">Белый</label>
-        <input type="checkbox" name="color" id="blue"><label for="blue">Синий</label>
-        <input type="checkbox" name="color" id="red"><label for="red">Красный</label>
-        <input type="checkbox" name="color" id="pink"><label for="pink">Розовый</label>
+      <section class="fiter">
+        <p>Фильтр</p>
+        <form action="#" method="get">
+          <label for="price">Стоимость</label>
+          <input type="range" min="0" max="10000" step="500" id="price">
+          
+          <span>Цвет</span>
+          <input type="checkbox" name="color" id="black"><label for="black">Черный</label>
+          <input type="checkbox" name="color" id="white"><label for="white">Белый</label>
+          <input type="checkbox" name="color" id="blue"><label for="blue">Синий</label>
+          <input type="checkbox" name="color" id="red"><label for="red">Красный</label>
+          <input type="checkbox" name="color" id="pink"><label for="pink">Розовый</label>
 
-        <p>Bluetooth</p>
-        <input type="radio" name="bluetooth" id="radio-yes" value="yes"><label for="radio-yes">Есть</label>
-        <input type="radio" name="bluetooth" id="radio-no" value="no"><label for="radio-no">Нет</label>
+          <p>Bluetooth</p>
+          <input type="radio" name="bluetooth" id="radio-yes" value="yes"><label for="radio-yes">Есть</label>
+          <input type="radio" name="bluetooth" id="radio-no" value="no"><label for="radio-no">Нет</label>
 
-        <input type="submit" value="Показать" class="button">
-      </form>
+          <input type="submit" value="Показать" class="button">
+        </form>
+      </section>
 
-      <p>Сортировка:</p>
-      <ul class="sorting">
-        <li><a href="#">По цене</a></li>
-        <li><a href="#">По типу</a></li>
-        <li><a href="#">По популярности</a></li>
-      </ul>
-      <a href="#">По убыванию</a>
-      <a href="#">По возрастанию</a>
+      <section class="sorting-block">
+        <p>Сортировка:</p>
+        <ul class="sorting">
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По популярности</a></li>
+        </ul>
+        <a href="#">По убыванию</a>
+        <a href="#">По возрастанию</a>
+      </section>
 
       <section class="goods">
-        <a href="#"><img src="#" width="360" height="380" alt="Любительская селфи-палка"></a>
-        <h2>Любительская селфи-палка</h2>
-        <p>500 руб.</p>
-        
-        <a href="#"><img src="#" width="360" height="380" alt="Профессиональная селфи-палка"></a>
-        <h2>Профессиональная селфи-палка</h2>
-        <p>1500 руб.</p>
+        <div class="product">
+          <a href="#"><img src="#" width="360" height="380" alt="Любительская селфи-палка"></a>
+          <h2>Любительская селфи-палка</h2>
+          <p>500 руб.</p>
+        </div>
 
-        <a href="#"><img src="#" width="360" height="380" alt="Непотопляемая селфи-палка"></a>
-        <h2>Непотопляемая селфи-палка</h2>
-        <p>2500 руб.</p>
+        <div class="product">
+          <a href="#"><img src="#" width="360" height="380" alt="Профессиональная селфи-палка"></a>
+          <h2>Профессиональная селфи-палка</h2>
+          <p>1500 руб.</p>
+        </div>
 
-        <a href="#"><img src="#" width="360" height="380" alt="Селфи-палка «Следуй за мной»"></a>
-        <h2>Селфи-палка «Следуй за мной»</h2>
-        <p>4900 руб.</p>
+        <div class="product">
+          <a href="#"><img src="#" width="360" height="380" alt="Непотопляемая селфи-палка"></a>
+          <h2>Непотопляемая селфи-палка</h2>
+          <p>2500 руб.</p>
+        </div>
 
+        <div class="product">
+          <a href="#"><img src="#" width="360" height="380" alt="Селфи-палка «Следуй за мной»"></a>
+          <h2>Селфи-палка «Следуй за мной»</h2>
+          <p>4900 руб.</p>
+        </div>
+      </section>
+
+      <section class="pagination-block">
         <a href="#">Назад</a>
         <ul class="pagination">
           <li><a href="#">1</a></li>
