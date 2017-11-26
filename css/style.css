@@ -89,6 +89,14 @@ body {
     text-decoration: none;
 }
 
+.main-menu a:hover {
+  opacity: 0.6;
+}
+
+.main-menu a:active {
+  opacity: 0.3;
+}
+
 .submenu a {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
@@ -96,12 +104,28 @@ body {
   text-decoration: none;
 }
 
+.right-menu, .pagination, .footer-right-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .right-menu a {
   font-family: "OpenSans-Light", "Arial", sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 300;
+  line-height: 36px;
+  color: black;
   text-decoration: none;
+}
+
+.right-menu a:hover {
+  opacity: 0.6;
+}
+
+.right-menu a:active {
+  opacity: 0.3;
 }
 
 .promo span {
@@ -144,12 +168,38 @@ body {
   line-height: 20px;
 }
 
-.categories a {
-  text-decoration: none;
+.categories {
+  list-style: none;
 }
 
+.categories a {
+  text-decoration: none;
+  color: black;
+}
+
+.categories h3:active {
+  opacity: 0.3;
+}
 .category-item h3 {
   font-size: 18px;
+}
+
+.category-item-background {
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
+}
+
+.category-item-background:hover {
+  background-color: #f0c52e;
+}
+
+.category-item-background:active {
+  background-color: #f0c52e;
+}
+
+.category-item img:active {
+  opacity: 0.5;
 }
 
 .services {
@@ -161,6 +211,54 @@ body {
   font-size: 15px;
   font-weight: 300; 
   line-height: 30px;
+}
+
+.manufacturers-list {
+  list-style: none;
+}
+
+a.dji {
+  display: block;
+  width: 260px;
+  height: 100px;
+  background-image: url("../img/manufacturer-dji.jpg");
+}
+
+a.dji:hover {
+  background-image: url("../img/manufacturer-dji-hover.jpg")
+}
+
+a.sp-gadgets {
+  display: block;
+  width: 260px;
+  height: 100px;
+  background-image: url("../img/manufacturer-sp-gadgets.jpg");
+}
+
+a.sp-gadgets:hover {
+  background-image: url("../img/manufacturer-sp-gadgets-hover.jpg")
+}
+
+a.go-pro {
+  display: block;
+  width: 260px;
+  height: 100px;
+  background-image: url("../img/manufacturer-go-pro.jpg");
+}
+
+a.go-pro:hover {
+  background-image: url("../img/manufacturer-go-pro-hover.jpg")
+}
+
+a.vive {
+  display: block;
+  width: 260px;
+  height: 100px;
+  background-image: url("../img/manufacturer-vive.jpg");
+}
+
+a.vive:hover {
+  background-image: url("../img/manufacturer-vive-hover.jpg")
 }
 
 .about-us p {
@@ -216,6 +314,15 @@ body {
 .footer-top a {
   color: white;
   text-decoration: none;
+  opacity: 0.7;
+}
+
+.footer-top a:hover {
+  opacity: 1;
+}
+
+.footer-top a:active {
+  opacity: 0.3;
 }
 
 .footer-middle p {
@@ -231,9 +338,124 @@ body {
   color: white;
 }
 
+.footer-middle a:hover {
+  opacity: 0.6;
+}
+
+.footer-middle a:active {
+  opacity: 0.3;
+}
+
 .footer-middle .phone {
   font-family: "OpenSans", "Arial", sans-serif;  
   font-size: 15px;
   font-weight: 300; 
   line-height: 30px;
+  opacity: 1;
+}
+
+
+
+.footer-logo img:hover {
+  opacity: 0.6;
+}
+
+.footer-logo img:hover {
+  opacity: 0.3;
+}
+
+/* Стили для страницы каталога */
+
+.breadcrumbs {
+  font-family: "OpenSans", "Arial", sans-serif;  
+  font-size: 14px;
+  font-weight: 300; 
+  line-height: 36px;
+  list-style: none;
+}
+
+.breadcrumbs a {
+  color: black;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs a:active {
+  opacity: 0.1;
+}
+
+.filter-headline {
+  font-size: 16px;
+}
+
+.filter-text {
+  font-family: "OpenSans", "Arial", sans-serif;  
+  font-size: 14px;
+  font-weight: 300; 
+  line-height: 40px;
+}
+
+.sorting {
+  font-family: "OpenSans", "Arial", sans-serif;  
+  font-size: 14px;
+  font-weight: 300; 
+  line-height: 18px;
+  list-style: none;
+}
+
+.sorting a {
+  text-decoration: none;
+  color: black;
+}
+
+a.sorting.another-page:hover {
+  opacity: 0.6;
+}
+
+a.sorting.another-page:active {
+  opacity: 1;
+}
+
+.goods h2 {
+  font-size: 18px;
+  color: black;
+}
+
+.goods p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #464646;
+}
+
+.goods .product a {
+  text-decoration: none;
+}
+
+.pagination-block a {
+  color: black;
+  text-decoration: none;
+}
+
+.pagination-block {
+  font-size: 16px;
+  background-color: #ebebeb;
+}
+
+.pagination-block.nav {
+  background-color:
+}
+
+.another-page {
+  opacity: 0.3;
+}
+
+.developer:hover {
+  opacity: 0.6;
+}
+
+.developer:active {
+  opacity: 0.3;
 }

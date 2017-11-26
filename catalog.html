@@ -9,34 +9,60 @@
   </head>
 
   <body>
-    <header>
-      <a href="#" class="header-logo"><img src="img/logo.png" alt="Логотип Device"></a>
+    <header class="header container">
+      <a href="/" class="header-logo">
+        <img src="img/logo.png" alt="Логотип Device">
+      </a>
       <div class="header-top">
         <form action="" method="post">
           <input type="search" placeholder="Поиск по сайту">
           <input type="submit" value="Найти">
         </form>
-        <ul>
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+        <ul class="right-menu">
+          <li>
+            <a href="#">Войти</a>
+          </li>
+          <li>
+            <a href="#">Сравнить</a>
+          </li>
+          <li>
+            <a href="#">Корзина</a>
+          </li>
         </ul>
       </div>
       <ul class="main-menu">
         <li>
           <a href="#">Каталог товаров</a>
-          <ul class="submenu">
-            <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="#">Фитнесс-браслеты</a></li>
-            <li><a href="#">Квадрокоптеры</a></li>
-            <li><a href="#">Моноподы для селфи</a></li>
-            <li><a href="#">Умные часы</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
+          <ul class="submenu hidden">
+            <li>
+              <a href="#">Виртуальная реальность</a>
+            </li>
+            <li>
+              <a href="#">Фитнесс-браслеты</a>
+            </li>
+            <li>
+              <a href="#">Квадрокоптеры</a>
+            </li>
+            <li>
+              <a href="#">Моноподы для селфи</a>
+            </li>
+            <li>
+              <a href="#">Умные часы</a>
+            </li>
+            <li>
+              <a href="#">Экшн-камеры</a>
+            </li>
           </ul>
         </li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li>
+          <a href="#">Доставка</a>
+        </li>
+        <li>
+          <a href="#">Гарантия</a>
+        </li>
+        <li>
+          <a href="#">Контакты</a>
+        </li>
       </ul>
     </header>
 
@@ -44,38 +70,42 @@
       <h1>Моноподы для селфи</h1>
 
       <ul class="breadcrumbs">
-        <li>Главная</li>
-        <li>Каталог товаров</li>
-        <li>Моноподы для селфи</li>
+        <li><a href="/" class="another-page">Главная</a></li>
+        <li><a href="#" class="another-page">Каталог товаров</a></li>
+        <li><a href="#" class="another-page">Моноподы для селфи</a></li>
       </ul>
 
       <section class="fiter">
-        <p>Фильтр</p>
+        <p class="filter-headline">Фильтр:</p>
         <form action="#" method="get">
-          <label for="price">Стоимость</label>
+          <label for="price" class="filter-headline">Стоимость</label>
           <input type="range" name="price" min="0" max="10000" step="500" id="price">
           
-          <span>Цвет</span>
-          <input type="checkbox" name="color" id="black"><label for="black">Черный</label>
-          <input type="checkbox" name="color" id="white"><label for="white">Белый</label>
-          <input type="checkbox" name="color" id="blue"><label for="blue">Синий</label>
-          <input type="checkbox" name="color" id="red"><label for="red">Красный</label>
-          <input type="checkbox" name="color" id="pink"><label for="pink">Розовый</label>
+          <span class="filter-headline">Цвет</span>
+          <div class="filter-text">
+            <input type="checkbox" name="color" id="black"><label for="black">Черный</label>
+            <input type="checkbox" name="color" id="white"><label for="white">Белый</label>
+            <input type="checkbox" name="color" id="blue"><label for="blue">Синий</label>
+            <input type="checkbox" name="color" id="red"><label for="red">Красный</label>
+            <input type="checkbox" name="color" id="pink"><label for="pink">Розовый</label>
+          </div>
 
-          <p>Bluetooth</p>
-          <input type="radio" name="bluetooth" id="radio-yes" value="yes"><label for="radio-yes">Есть</label>
-          <input type="radio" name="bluetooth" id="radio-no" value="no"><label for="radio-no">Нет</label>
+          <p class="filter-headline">Bluetooth</p>
+          <div class="filter-text">
+            <input type="radio" name="bluetooth" id="radio-yes" value="yes"><label for="radio-yes">Есть</label>
+            <input type="radio" name="bluetooth" id="radio-no" value="no"><label for="radio-no">Нет</label>
+          </div>
 
           <input type="submit" value="Показать" class="button">
         </form>
       </section>
 
       <section class="sorting-block">
-        <p>Сортировка:</p>
+        <p class="sorting-headline">Сортировка:</p>
         <ul class="sorting">
           <li><a href="#">По цене</a></li>
-          <li><a href="#">По типу</a></li>
-          <li><a href="#">По популярности</a></li>
+          <li><a href="#" class="another-page">По типу</a></li>
+          <li><a href="#" class="another-page">По популярности</a></li>
         </ul>
         <a href="#" class="visually-hidden">По убыванию</a>
         <a href="#" class="visually-hidden">По возрастанию</a>
@@ -108,39 +138,56 @@
       </section>
 
       <section class="pagination-block">
-        <a href="#">Назад</a>
+        <a href="#" class="nav">Назад</a>
         <ul class="pagination">
           <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
+          <li><a href="#" class="another-page">2</a></li>
+          <li><a href="#" class="another-page">3</a></li>
         </ul>
-        <a href="#">Вперед</a>
+        <a href="#" class="nav">Вперед</a>
       </section>
     </main>
     
-    <footer>
-      <div class="footer-top">
-        <a href="" class="footer-logo"><img src="img/logo.png" alt="Логотип Device"></a>
-        <ul>
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
-        </ul>
-      </div>
+  <footer>
+    <div class="footer-top container">
+      <a href="#" class="footer-logo">
+        <img src="img/footer-logo.png" alt="Логотип Device">
+      </a>
+      <ul class="footer-right-menu">
+        <li>
+          <a href="#">Войти</a>
+        </li>
+        <li>
+          <a href="#">Сравнить</a>
+        </li>
+        <li>
+          <a href="#">Корзина</a>
+        </li>
+      </ul>
+    </div>
 
-      <div class="footer-middle"></div>
-        <p>г. Москва, ул. Строителей, 15</p>
-        <a href="#">Доставка</a>
-        <a href="#">Гарантия</a>
-        <a href="#">Контакты</a>
-        <a href="tel: +74954959595">Тел.: +7 (495) 495-95-95</a>
-      
-      <div class="footer-bottom">
-        <a href="#" class="button-social" rel="nofollow"><span>Facebook</span></a>
-        <a href="#" class="button-social" rel="nofollow"><span>Instagram</span></a>
-        <a href="#" class="button-social" rel="nofollow"><span>Twitter</span></a>
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="developer" rel="nofollow">HTML-Academy</a>
-      </div>
-    </footer>
+    <div class="footer-middle container">
+      <p>г. Москва, ул. Строителей, 15</p>
+      <a href="#">Доставка</a>
+      <a href="#">Гарантия</a>
+      <a href="#">Контакты</a>
+      <a href="tel: +74954959595" class="phone">Тел.: +7 (495) 495-95-95</a>
+    </div>
+
+    <div class="footer-bottom container">
+      <a href="#" class="button-social" rel="nofollow">
+        <span class="visually-hidden">Facebook</span>
+      </a>
+      <a href="#" class="button-social" rel="nofollow">
+        <span class="visually-hidden">Instagram</span>
+      </a>
+      <a href="#" class="button-social" rel="nofollow">
+        <span class="visually-hidden">Twitter</span>
+      </a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" class="developer" rel="nofollow">
+        <span class="visually-hidden">HTML-Academy</span>
+      </a>
+    </div>
+  </footer>
   </body>
 </html>
