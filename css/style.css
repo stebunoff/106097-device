@@ -710,27 +710,61 @@ a.sorting.another-page:active {
   content: "";
   
   position: absolute;
-  right: 22px;
-  top: 3px;
+  right: 43px;
+  top: 8px;
 
   width: 18px;
   height: 18px;
 
-  background-image: url(../img/icon-enter.svg);
-  background-color: #ffc600;
+  background-image: url(../img/icon-enter-y.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .footer-right-menu li:nth-child(2) {
   margin-right: 41px;
+  position: relative;
+}
+
+.footer-right-menu li:nth-child(2)::before {
+  content: "";
+  
+  position: absolute;
+  right: 65px;
+  top: 10px;
+
+  width: 18px;
+  height: 18px;
+
+  background-image: url(../img/icon-compare-y.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.footer-right-menu li:nth-child(3) {
+  position: relative;
+}
+
+.footer-right-menu li:nth-child(3)::before {
+  content: "";
+  
+  position: absolute;
+  right: 57px;
+  top: 8px;
+
+  width: 18px;
+  height: 18px;
+
+  background-image: url(../img/icon-cart-y.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .footer-middle {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-
+  position: relative;
 }
 
 .footer-menu {
@@ -740,7 +774,93 @@ a.sorting.another-page:active {
   width: 425px;
 }
 
+.footer-middle::before {
+  content: "";
+
+  position: absolute;
+  top: 130px;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #ffc600;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
 .footer-menu a {
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: right;
+}
+
+.footer-bottom a {
+  margin-right: 14px;
+}
+
+.footer-bottom a:first-child {
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/icon-facebook.svg);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.footer-bottom a:first-child:hover {
+  opacity: 0.6;
+}
+
+.footer-bottom a:first-child:active {
+  opacity: 0.1;
+}
+
+.footer-bottom a:nth-child(2) {
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/icon-instagram.svg);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.footer-bottom a:nth-child(2):hover {
+  opacity: 0.6;
+}
+
+.footer-bottom a:nth-child(2):active {
+  opacity: 0.1;
+}
+
+.footer-bottom a:nth-child(3) {
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/icon-twitter.svg);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.footer-bottom a:nth-child(3):hover {
+  opacity: 0.6;
+}
+
+.footer-bottom a:nth-child(3):active {
+  opacity: 0.1;
+}
+
+.developer {
+  width: 29px;
+  height: 37px;
+  background-image: url(../img/icon-htmlacademy.svg);
+  background-repeat: no-repeat;
+}
+
+.developer:hover {
+  opacity: 0.6;
+}
+
+.developer:active {
+  opacity: 0.3;
 }
