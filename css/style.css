@@ -531,14 +531,12 @@ a.vive:hover {
 
 /* Стили для страницы каталога */
 
-h1.container {
-  margin-left: 80px;
-  margin-bottom: 20px;
+.catalog-headline {
+  margin-left: 60px;
 }
 
 .breadcrumbs {
-  padding-left: 75px; 
-  margin-left: 25px;
+  margin-left: 23px;
   margin-bottom: 50px; 
   font-family: "OpenSans", "Arial", sans-serif;  
   font-size: 14px;
@@ -551,9 +549,7 @@ h1.container {
 .breadcrumbs a {
   color: black;
   text-decoration: none;
-  margin-right: 40px;
-  position: relative;
-
+  vertical-align: baseline;
 }
 
 .breadcrumbs a:hover {
@@ -564,18 +560,26 @@ h1.container {
   opacity: 0.1;
 }
 
-.breadcrumbs a::after {
+.breadcrumbs li {
+  margin-right: 40px;
+}
+
+.breadcrumbs li::after {
   content: "";
   display: inline-block;
-
   vertical-align: middle;
-  margin-left: 15px;
+  margin-left: 16px;
+  margin-top: 2px;
   width: 7px;
   height: 11px;
   background-image: url(../img/icon-nav-arrow.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 1;
+}
+
+.breadcrumbs li:last-child::after {
+  background-image: none;
 }
 
 .catalog-wrapper {
@@ -738,6 +742,20 @@ a.sorting.another-page:active {
 
 .goods a {
   text-decoration: none;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-price {
+  width: 80px;
 }
 
 .pagination-block a {
