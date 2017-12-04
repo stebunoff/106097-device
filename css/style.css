@@ -305,15 +305,40 @@ vertical-align: middle;
   position: relative;
 }
 
+.promo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.promo-1, .promo-2, .promo-3 {
+  width: 1160px;
+  padding-right: 101px;
+  padding-top: 48px;
+}
+
+.slider-description {
+  width: 480px;
+}
+
 .promo span {
   font-size: 179.2px;
   font-style: bold;
   color: white;
+  position: absolute;
+  top: -175px;
+  right: 70px;
 }
 
 .promo-headline {
   font-size: 47px;
   font-style: bold;
+  position: absolute;
+  top: -115px;
+  letter-spacing: 20;
 }
 
 .promo-text {
@@ -322,11 +347,16 @@ vertical-align: middle;
   font-style: normal;
   font-weight: 300;
   line-height: 30px;
+  min-height: 96px;
 }
 
 .button {
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 18px;
+  text-transform: uppercase;
+  width: 220px;
+  display: block;
+  text-align: center;
 }
 
 .promo a {
@@ -336,7 +366,9 @@ vertical-align: middle;
 .promo {
   position: relative;
   display: flex;
-
+  flex-direction: column;
+  justify-content: flex-start;  
+  align-items: flex-end;
 }
 
 .promo img {
