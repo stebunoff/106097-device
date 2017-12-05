@@ -33,29 +33,29 @@ input[type="radio"].visually-hidden {
 @font-face {
   font-family: "Gilroy";
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   src: local("Gilroy-Light"), url("../fonts/gilroylight.woff2") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
 }
 
 @font-face {
   font-family: "Gilroy";
   font-style: normal;
-  font-weight: 800;
+  font-weight: bold;
   src: local("Gilroy-ExtraBold"), url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  font-weight: normal;
-  src: local("OpenSans"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+  font-weight: 400;
+  src: local("Open Sans"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
-  src: local("OpenSans-Light"), url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+  src: local("Open Sans"), url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
 }
 
 body {
@@ -64,7 +64,7 @@ body {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
   line-height: auto;
-  font-weight: 800;
+  font-weight: normal;
   color: #000000;
 }
 
@@ -168,7 +168,6 @@ body {
 .submenu a {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
-  font-style: light;
   text-decoration: none;
 }
 
@@ -284,7 +283,7 @@ vertical-align: middle;
 }
 
 .right-menu a {
-  font-family: "OpenSans-Light", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 300;
@@ -316,12 +315,12 @@ vertical-align: middle;
 
 .promo-1, .promo-2, .promo-3 {
   width: 1160px;
-  padding-right: 101px;
+  padding-right: 80px;
   padding-top: 48px;
 }
 
 .slider-description {
-  width: 480px;
+  width: 500px;
 }
 
 .promo span {
@@ -335,23 +334,23 @@ vertical-align: middle;
 
 .promo-headline {
   font-size: 47px;
-  font-style: bold;
+  font-weight: bold;
   position: absolute;
   top: -115px;
-  letter-spacing: 20;
+  letter-spacing: 0.1px;
 }
 
 .promo-text {
-  font-family: "OpenSans-Light", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 300;
   line-height: 30px;
-  min-height: 96px;
+  min-height: 86px;
 }
 
 .button {
-  font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   text-transform: uppercase;
   width: 220px;
@@ -363,34 +362,99 @@ vertical-align: middle;
   text-decoration: none;
 }
 
+.slider-nav {
+  display: flex;
+}
+
+.button {
+  width: 220px;
+  height: 40px;
+  color: black;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
+  background-repeat: no-repeat;
+  line-height: 40px;
+  font-weight: bold;
+  letter-spacing: 3.5px;
+}
+
+.button:hover {
+  background-color: #f0c52e;
+}
+
+.button:active {
+  background-color: #f0c52e;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.promo-controls {
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 178px;
+}
+
+.promo-controls label {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 21px;
+
+  background-image: url(../img/button-slider-empty.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.promo-controls label:last-child {
+  margin-right: 0;
+}
 .promo {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;  
   align-items: flex-end;
+  margin-bottom: 55px;
 }
 
 .promo img {
   position: absolute;
   top: -150px;
-  left: 65px;
+  left: 70px;
 }
 
-.promo .specs .specs-values {
+.specs-values {
   font-size: 36px;
   font-weight: 300;
+  height: 59px;
 }
 
-.promo .specs .specs-paratemers {
-  font-family: "OpenSans-Light", "Arial", sans-serif;  
+.specs-paratemers {
+  font-family: "Open Sans", "Arial", sans-serif;  
   font-size: 13px;
   font-weight: 300;
   line-height: 20px;
 }
 
+.specs {
+  width: 460px;
+  margin-top: 42px;
+  margin-left: -3px;
+}
+
+.specs tr td:first-child {
+  width: 157px;
+}
+
+.specs tr td:nth-child(2) {
+  width: 138px;
+}
+
 .categories {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .categories a {
@@ -401,6 +465,12 @@ vertical-align: middle;
 .categories h3:active {
   opacity: 0.3;
 }
+
+.category-item {
+  width: 160px;
+  margin-right: 40px;
+}
+
 .category-item h3 {
   font-size: 18px;
 }
@@ -408,7 +478,12 @@ vertical-align: middle;
 .category-item-background {
   width: 160px;
   height: 160px;
+  margin-bottom: 35px;
+
   background-color: #f7e296;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .category-item-background:hover {
@@ -428,9 +503,9 @@ vertical-align: middle;
 }
 
 .services p {
-  font-family: "OpenSans-Light", "Arial", sans-serif;  
+  font-family: "Open Sans", "Arial", sans-serif;  
   font-size: 15px;
-  font-weight: 300; 
+  font-weight: normal; 
   line-height: 30px;
 }
 
@@ -483,9 +558,9 @@ a.vive:hover {
 }
 
 .about-us p {
-  font-family: "OpenSans-Light", "Arial", sans-serif;  
+  font-family: "Open Sans", "Arial", sans-serif;  
   font-size: 15px;
-  font-weight: 300; 
+  font-weight: normal; 
   line-height: 30px;
 }
 
@@ -498,9 +573,9 @@ a.vive:hover {
 }
 
 .contacts p {
-  font-family: "OpenSans-Light", "Arial", sans-serif;  
+  font-family: "Open Sans", "Arial", sans-serif;  
   font-size: 15px;
-  font-weight: 300; 
+  font-weight: normal; 
   line-height: 30px;
 }
 
