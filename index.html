@@ -75,8 +75,11 @@
     <h1 class="visually-hidden">Интернет-магазин Девайс</h1>
     <section class="promo container">
       <h2 class="visually-hidden">Популярные товары</h2>
+      <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+      <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+      <input class="visually-hidden" type="radio" id="product-3" name="toggle">
       <ul class="promo-list">
-      <li class="promo promo-1">
+      <li class="promo promo-1" id="slide-1">
         <span>01</span>
         <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи">
         <div class="slider-description">
@@ -86,9 +89,9 @@
         <div class="slider-nav">
         <a href="#" class="button">Подробнее</a>
         <div class="promo-controls">
-          <label for="promo-1">Первый</label>
-          <label for="promo-2">Второй</label>
-          <label for="promo-3">Третий</label>
+          <label for="product-1">Первый</label>
+          <label for="product-2">Второй</label>
+          <label for="product-3">Третий</label>
         </div>
         </div>
         <table class="specs">
@@ -106,15 +109,21 @@
       </div>
       </li>
 <!--
-      <li class="promo promo-2">
+      <li class="promo promo-2" id="slide-2">
         <span>02</span>
         <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-трекер">
         <div class="slider-description">
-        <p class="promo-headline">Худеем
-          <br>правильно!</p>
+          <p class="promo-headline">Худеем
+            <br>правильно!</p>
         <p class="promo-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+        <div class="slider-nav">
         <a href="#" class="button">Подробнее</a>
-        <button class="slider-button-2"></button>
+        <div class="promo-controls">
+          <label for="product-1">Первый</label>
+          <label for="product-2">Второй</label>
+          <label for="product-3">Третий</label>
+        </div>
+        </div>
         <table class="specs">
           <tr class="specs-values">
             <td>48 часов</td>
@@ -123,18 +132,24 @@
             <td>Без подзарядки</td>
           </tr>
         </table>
-        </div>
+      </div>
       </li>
 
-      <li class="promo promo-3">
+      <li class="promo promo-3" id="slide-3">
         <span>03</span>
         <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
         <div class="slider-description">
-        <p class="promo-headline">Порхает как бабочка,
-          <br>жалит как пчела!</p>
+          <p class="promo-headline">Порхает как бабочка,
+            <br>жалит как пчела!</p>
         <p class="promo-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+        <div class="slider-nav">
         <a href="#" class="button">Подробнее</a>
-        <button class="slider-button-3"></button>
+        <div class="promo-controls">
+          <label for="product-1">Первый</label>
+          <label for="product-2">Второй</label>
+          <label for="product-3">Третий</label>
+        </div>
+        </div>
         <table class="specs">
           <tr class="specs-values">
             <td>800 м</td>
@@ -145,7 +160,7 @@
             <td>Радиус поражения</td>
           </tr>
         </table>
-</div>
+      </div>
       </li> -->
     </ul>
     </section>
@@ -161,8 +176,8 @@
         </li>
         <li class="category-item">
           <a href="#">
-            <div class="category-item-background"><img src="img/icon-goods-monopod.svg"></div>
-            <h3>Моноподы для селфи</h3>
+            <div class="category-item-background item-2"><img src="img/icon-goods-monopod.svg"></div>
+            <h3>Моноподы <br>для селфи</h3>
           </a>
         </li>
         <li class="category-item">
@@ -194,18 +209,18 @@
 
     <section class="services">
       <div class="container">
-        <ul>
-          <li>
-            <button>Доставка</button>
+        <ul class="services-list">
+          <li class="service">
+            <button class="button-services">Доставка</button>
           </li>
-          <li>
-            <button>Гарантия</button>
+          <li class="service">
+            <button class="button-services">Гарантия</button>
           </li>
-          <li>
-            <button>Кредит</button>
+          <li class="service">
+            <button class="button-services">Кредит</button>
           </li>
         </ul>
-
+<div class="services-description">
         <div class="service-delivery">
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
@@ -222,6 +237,7 @@
             Выгодные для нашего банка, разумеется.</p>
         </div>
       </div>
+    </div>
     </section>
 
     <section class="manufacturers container">

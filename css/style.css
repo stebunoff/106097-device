@@ -135,7 +135,7 @@ body {
 .main-menu a {
     color: black;
     font-size: 18px;
-    font-style: bold;
+    font-weight: bold;
     text-decoration: none;
     position: relative;
 }
@@ -317,6 +317,7 @@ vertical-align: middle;
   width: 1160px;
   padding-right: 80px;
   padding-top: 48px;
+  display: none;
 }
 
 .slider-description {
@@ -325,7 +326,7 @@ vertical-align: middle;
 
 .promo span {
   font-size: 179.2px;
-  font-style: bold;
+  font-weight: bold;
   color: white;
   position: absolute;
   top: -175px;
@@ -409,11 +410,28 @@ vertical-align: middle;
 }
 .promo {
   position: relative;
-  display: flex;
   flex-direction: column;
   justify-content: flex-start;  
   align-items: flex-end;
   margin-bottom: 55px;
+}
+
+#product-1:checked ~ .promo-list #slide-1,
+#product-1:checked ~ .promo-list #slide-2,
+#product-1:checked ~ .promo-list #slide-3 {
+  display: flex;
+}
+
+#product-1:checked ~ .promo-list label[for="product-1"] {
+  background-image: url(../img/button-slider.svg);
+}
+
+#product-1:checked ~ .promo-list label[for="product-2"] {
+  background-image: url(../img/button-slider.svg);
+}
+
+#product-1:checked ~ .promo-list label[for="product-3"] {
+  background-image: url(../img/button-slider.svg);
 }
 
 .promo img {
@@ -447,6 +465,12 @@ vertical-align: middle;
 
 .specs tr td:nth-child(2) {
   width: 138px;
+}
+
+.items {
+  padding: 0;
+  margin-left: 34px;
+  margin-bottom: 90px;
 }
 
 .categories {
@@ -498,8 +522,31 @@ vertical-align: middle;
   opacity: 0.5;
 }
 
+.category-item-background .item-2 {
+  align-self: flex-end;
+}
+
 .services {
+  min-height: 320px;
   background-color: #e5e5e5;
+}
+
+.services > .container {
+  display: flex;
+}
+
+.services-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 280px;
+  border-right: 20px solid black;
+  padding-top: 80px;
+}
+
+.services-description {
+  width: 429px;
+  margin-left: 120px;
 }
 
 .services p {
@@ -507,6 +554,34 @@ vertical-align: middle;
   font-size: 15px;
   font-weight: normal; 
   line-height: 30px;
+}
+
+.button-services {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  text-align: center;
+  width: 160px;
+  height: 40px;
+  color: black;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
+  background-repeat: no-repeat;
+}
+
+.button-services:hover {
+  background-color: #f0c52e;
+}
+
+.button-services:active {
+  background-color: black;
+  background-image: none;
+  color: #f7e184;
+}
+
+.service:active {
+  background-color: black;
 }
 
 .manufacturers-list {
