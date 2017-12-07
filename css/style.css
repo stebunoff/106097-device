@@ -77,6 +77,7 @@ body {
 }
 
 .header {
+  width: 1160px;
   min-height: 300px;
   margin-top: 40px;
   background-color: #f7e296;
@@ -310,7 +311,6 @@ vertical-align: middle;
   list-style: none;
   display: flex;
   flex-direction: column;
-
 }
 
 .promo-1, .promo-2, .promo-3 {
@@ -318,6 +318,7 @@ vertical-align: middle;
   padding-right: 80px;
   padding-top: 48px;
   display: none;
+  position: relative;
 }
 
 .slider-description {
@@ -331,6 +332,7 @@ vertical-align: middle;
   position: absolute;
   top: -175px;
   right: 70px;
+  letter-spacing: 1.792;
 }
 
 .promo-headline {
@@ -338,7 +340,21 @@ vertical-align: middle;
   font-weight: bold;
   position: absolute;
   top: -115px;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.47px;
+}
+
+.promo-1::before {
+  content: "";
+  position: absolute;
+  top: -112px;
+  left: 581px;
+
+  width: 100px;
+  height: 7px;
+
+  background-color: white;
+  background-repeat: none;
+  background-position: 0 0;
 }
 
 .promo-text {
@@ -348,6 +364,7 @@ vertical-align: middle;
   font-weight: 300;
   line-height: 30px;
   min-height: 86px;
+  letter-spacing: 0.15px;
 }
 
 .button {
@@ -388,6 +405,10 @@ vertical-align: middle;
 }
 
 .promo-controls {
+  position: absolute;
+  top: 177px;
+  right: 122px;
+
   font-size: 0;
   display: flex;
   align-items: center;
@@ -413,24 +434,30 @@ vertical-align: middle;
   flex-direction: column;
   justify-content: flex-start;  
   align-items: flex-end;
-  margin-bottom: 55px;
+  margin-bottom: 109px;
 }
 
-#product-1:checked ~ .promo-list #slide-1,
-#product-1:checked ~ .promo-list #slide-2,
-#product-1:checked ~ .promo-list #slide-3 {
+#product-1:checked ~ #slide-1 {
   display: flex;
 }
 
-#product-1:checked ~ .promo-list label[for="product-1"] {
+#product-2:checked ~ #slide-2 {
+  display: flex;
+}
+
+#product-3:checked ~ #slide-3 {
+  display: flex;
+}
+
+#product-1:checked ~ .promo-controls label[for="product-1"] {
   background-image: url(../img/button-slider.svg);
 }
 
-#product-1:checked ~ .promo-list label[for="product-2"] {
+#product-2:checked ~ .promo-controls label[for="product-2"] {
   background-image: url(../img/button-slider.svg);
 }
 
-#product-1:checked ~ .promo-list label[for="product-3"] {
+#product-3:checked ~ .promo-controls label[for="product-3"] {
   background-image: url(../img/button-slider.svg);
 }
 
@@ -470,7 +497,7 @@ vertical-align: middle;
 .items {
   padding: 0;
   margin-left: 34px;
-  margin-bottom: 67px;
+  margin-bottom: 69px;
 }
 
 .categories {
@@ -527,27 +554,47 @@ vertical-align: middle;
 }
 
 .services {
-  background-color: #e5e5e5;
-  margin-bottom: 161px;
+  background-image: linear-gradient(to bottom, transparent 0px, transparent 100px, #e5e5e5 100px, #e5e5e5 100%);
+  background-repeat: none;
+  min-height: 388px;
+  margin-bottom: 91px;
 }
 
 .services > .container {
   display: flex;
+  margin-left: 15px;
 }
 
 .services-list {
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 280px;
+  width: 283px;
   border-right: 7px solid black;
   padding-top: 80px;
-  min-height: 320px;
+  min-height: 319px;
 }
 
 .services-description {
   width: 429px;
-  margin-left: 120px;
+  margin-left: 117px;
+  padding-top: 22px;
+}
+
+.service-text {
+  display: none;
+}
+
+.service-text h3 {
+  font-size: 47px;
+  letter-spacing: 0.47;
+  margin-bottom: 29px;
+}
+
+#service_1:checked ~ .service-delivery,
+#service_2:checked ~ .service-warranty,
+#service_3:checked ~ .service-credit {
+  display: block;
 }
 
 .services p {
@@ -563,19 +610,26 @@ vertical-align: middle;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 3.5px;
-  text-align: center;
   width: 160px;
   height: 40px;
   color: black;
   background-image: linear-gradient(to bottom, transparent 0%, transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%, transparent 100%);
   background-repeat: no-repeat;
-  background-color: #e5e5e5;
+  background-color: transparent;
   border: none;
+  text-align: left;
   cursor: pointer;
   user-select: none;
+  outline: none;
 }
 
-.button-services:hover {
+.button-services label {
+  display: block;
+  width: 160px;
+  text-align: center;
+}
+
+.button-services:hover, .button-services:focus {
   background-color: #f0c52e;
 }
 
@@ -583,19 +637,58 @@ vertical-align: middle;
   background-color: black;
   background-image: none;
   color: #f7e184;
+  width: 100%;
 }
 
-.service:active {
-  background-color: black;
+.service {
+  margin-bottom: 24px;
 }
 
-.service-text h3 {
-  font-size: 47px;
-  letter-spacing: 0.47;
+.service-delivery {
+  position: relative;
+}
+
+.service-delivery:before {
+  content: "";
+
+  position: absolute;
+  left: 500px;
+  width: 136px;
+  height: 164px;
+
+  background-image: url(../img/icon-delivery.svg);
+  background-repeat: none;
+  background-position: 0 0;
+}
+
+.service-warranty:before {
+  content: "";
+
+  position: absolute;
+  left: 1000px;
+  width: 171px;
+  height: 195px;
+
+  background-image: url(../img/icon-warranty.svg);
+  background-repeat: none;
+  background-position: 0 0;
+}
+
+.service-credit:before {
+  content: "";
+
+  position: absolute;
+  left: 1000px;
+  width: 156px;
+  height: 188px;
+
+  background-image: url(../img/icon-credit.svg);
+  background-repeat: none;
+  background-position: 0 0;
 }
 
 .manufacturers {
-  min-height: 286px;
+  min-height: 206px;
 }
 
 .manufacturers-list {
@@ -656,6 +749,7 @@ a.vive:hover {
 
 .about-and-contacts {
   display: flex;
+  margin-left: 10px;
 }
 
 .about-us {
@@ -665,6 +759,21 @@ a.vive:hover {
 .about-us h2 {
   font-size: 47px;
   letter-spacing: 0.47;
+  position: relative;
+}
+
+.about-us h2::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 3px;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: black;
+  background-repeat: none;
+  background-position: 0 0;
 }
 
 .about-us p {
@@ -690,6 +799,21 @@ a.vive:hover {
 .contacts h2 {
   font-size: 47px;
   letter-spacing: 0.47;
+  position: relative;
+}
+
+.contacts h2::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 3px;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: black;
+  background-repeat: none;
+  background-position: 0 0;
 }
 
 .contacts p {
@@ -1302,10 +1426,12 @@ a.sorting.another-page:active {
 
 .footer-bottom li:first-child:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .footer-bottom li:first-child:active {
   opacity: 0.1;
+  cursor: pointer;
 }
 
 .footer-bottom li:nth-child(2) {
@@ -1318,10 +1444,12 @@ a.sorting.another-page:active {
 
 .footer-bottom li:nth-child(2):hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .footer-bottom li:nth-child(2):active {
   opacity: 0.1;
+  cursor: pointer;
 }
 
 .footer-bottom li:nth-child(3) {
@@ -1334,10 +1462,12 @@ a.sorting.another-page:active {
 
 .footer-bottom li:nth-child(3):hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .footer-bottom li:nth-child(3):active {
   opacity: 0.1;
+  cursor: pointer;
 }
 
 .developer {
@@ -1350,8 +1480,10 @@ a.sorting.another-page:active {
 
 .developer:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .developer:active {
   opacity: 0.3;
+  cursor: pointer;
 }
