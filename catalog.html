@@ -10,7 +10,7 @@
 
 <body>
   <div class="container">
-    <header class="header">
+    <header class="header header-catalog">
       <a href="/" class="header-logo">
         <img src="img/logo.png" alt="Логотип Device">
       </a>
@@ -91,7 +91,7 @@
         </li>
       </ul>
     </div>
-    <div class="catalog-wrapper">
+    <div class="catalog-header-wrapper">
             <div class="catalog-header">
               <div class="container">
         <p class="filter-headline main-headline">Фильтр:</p>
@@ -117,6 +117,8 @@
           </div>
           </div>
       </div>
+      </div>
+      <div class="catalog-wrapper">
       <div class="catalog container">
 
         <form action="#" method="get" class="filter">
@@ -151,7 +153,7 @@
               <label for="radio-no" class="bluetooth-label">Нет</label>
             </div>
           </fieldset>
-          <input type="submit" value="Показать" class="button">
+          <input type="submit" value="Показать" class="button filter-button">
         </form>
 
         <div class="catalog-without-filter">
@@ -163,14 +165,19 @@
           <div class="goods">
             <div class="product">
               <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+              <div class="add-to-cart">
+                  <button class="button add-to-cart-button">В корзину</button>
+                  <button class="add-to-compare">Добавить к сравнению</button>
+                </div>
               <div class="product-text">
                 <a href="#" class="product-link">
                   <h2>Любительская селфи-палка</h2>
                 </a>
                 <p class="product-price">500 руб.</p>
+
               </div>
             </div>
-
+            
             <div class="product">
 
               <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
