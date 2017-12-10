@@ -15,7 +15,7 @@
     </a>
     <div class="header-top">
 
-      <form class="search" action="" method="post">
+      <form class="search" action="search" method="post">
         <input class="search-text" type="text" placeholder="Поиск по сайту">
         <input class="search-button" type="submit" value="Найти">
       </form>
@@ -42,7 +42,7 @@
               <a href="#">Виртуальная реальность</a>
             </li>
             <li>
-              <a href="#">Моноподы для селфи</a>
+              <a href="catalog.html">Моноподы для селфи</a>
             </li>
             <li>
               <a href="#">Экшн-камеры</a>
@@ -168,15 +168,15 @@
         <li class="category-item">
           <a href="#">
             <div class="category-item-background">
-              <img src="img/icon-goods-vr.svg">
+              <img src="img/icon-goods-vr.svg" alt="Виртуальная реальность">
             </div>
             <h3>Виртуальная реальность</h3>
           </a>
         </li>
         <li class="category-item">
-          <a href="#">
+          <a href="catalog.html">
             <div class="category-item-background item-goods">
-              <img src="img/icon-goods-monopod.svg">
+              <img src="img/icon-goods-monopod.svg" alt="Моноподы">
             </div>
             <h3>Моноподы
               <br>для селфи</h3>
@@ -185,7 +185,7 @@
         <li class="category-item">
           <a href="#">
             <div class="category-item-background">
-              <img src="img/icon-goods-camera.svg">
+              <img src="img/icon-goods-camera.svg" alt="Экшн-камеры">
             </div>
             <h3>Экшн-камеры</h3>
           </a>
@@ -193,7 +193,7 @@
         <li class="category-item">
           <a href="#">
             <div class="category-item-background">
-              <img src="img/icon-goods-fitness.svg">
+              <img src="img/icon-goods-fitness.svg" alt="Фитнес-браслеты">
             </div>
             <h3>Фитнес-браслеты</h3>
           </a>
@@ -201,7 +201,7 @@
         <li class="category-item">
           <a href="#">
             <div class="category-item-background">
-              <img src="img/icon-goods-watch.svg">
+              <img src="img/icon-goods-watch.svg" alt="Умные часы">
             </div>
             <h3>Умные часы</h3>
           </a>
@@ -209,7 +209,7 @@
         <li class="category-item">
           <a href="#">
             <div class="category-item-background">
-              <img src="img/icon-goods-copter.svg">
+              <img src="img/icon-goods-copter.svg" alt="Квадракоптеры">
             </div>
             <h3>Квадракоптеры</h3>
           </a>
@@ -221,19 +221,19 @@
       <div class="container">
         <ul class="services-list">
           <li class="service">
-            <button class="button-services first-button">
-              <label for="service_1">Доставка</label>
-            </button>
+            <label class="button-services first-button" for="service_1">
+              <span>Доставка</span>
+            </label>
           </li>
           <li class="service">
-            <button class="button-services">
-              <label for="service_2">Гарантия</label>
-            </button>
+            <label class="button-services" for="service_2">
+              <span>Гарантия</span>
+            </label>
           </li>
           <li class="service">
-            <button class="button-services">
-              <label for="service_3">Кредит</label>
-            </button>
+            <label class="button-services" for="service_3">
+              <span>Кредит</span>
+            </label>
           </li>
         </ul>
         <div class="services-description">
@@ -314,8 +314,8 @@
           </p>
         </div>
         <p>
-          <label for="text" class="fields-names">Текст письма:</label>
-          <textarea class="field field-text" placeholder="В свободной форме"></textarea>
+          <label for="message" class="fields-names">Текст письма:</label>
+          <textarea class="field field-text" placeholder="В свободной форме" id="message"></textarea>
         </p>
         <button type="submit" class="button">Отправить</button>
       </form>
@@ -353,7 +353,7 @@
           <a href="#">Контакты</a>
         </li>
       </ul>
-      <a href="tel: +74954959595" class="phone">Тел.: +7 (495) 495-95-95</a>
+      <a href="tel:+74954959595" class="phone">Тел.: +7 (495) 495-95-95</a>
     </div>
 
     <div class="footer-bottom container">
