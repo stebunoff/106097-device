@@ -961,6 +961,8 @@ a.vive:hover {
 /* Стили для страницы каталога */
 
 .catalog-headline {
+  font-size: 47px;
+  letter-spacing: 0.47;
   margin-left: 60px;
 }
 
@@ -1175,6 +1177,10 @@ a.vive:hover {
   background-image: url(../img/icon-checkbox-on.svg);
 }
 
+.checkbox-color + .color-label:hover::before {
+  opacity: 0.6;
+}
+
 .checkbox-bluetooth {
   display: none;
   line-height: 27px;
@@ -1198,6 +1204,10 @@ a.vive:hover {
 }
 
 .checkbox-bluetooth + .bluetooth-label:hover::before {
+  opacity: 0.6;
+}
+
+.checkbox-bluetooth + .bluetooth-label:disabled::before {
   opacity: 0.6;
 }
 
@@ -1358,19 +1368,21 @@ a.vive:hover {
 
 .add-to-cart {
   display: none;
-}
-
-.add-to-cart:hover {
-  display: flex;
-}
-
-.product > img:hover + .add-to-cart {
-  display: flex;
   flex-direction: column;
   position: absolute;
   width: 360px;
   min-height: 380px;
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+.add-to-cart:hover {
+  display: flex;
+  
+}
+
+.product > img:hover + .add-to-cart {
+  display: flex;
+
 }
 
 .add-to-cart-button {
@@ -1391,6 +1403,7 @@ opacity: 1;
 
 .add-to-compare:active {
 opacity: 0.2;
+outline: none;
 }
 
 
@@ -1656,4 +1669,95 @@ opacity: 0.2;
 .developer:active {
   opacity: 0.3;
   cursor: pointer;
+}
+
+/* Модальные окна */
+
+.modal {
+  width: 960px;
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  margin-left: -480px;
+  background-color: white;
+  box-shadow: 0 30px 50px  rgba(0, 0, 0, 0.7)
+}
+
+.modal-write-us {
+  min-height: 553px;
+}
+
+.modal-write-us .fields-names {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.modal-map {
+  min-height: 559px;
+}
+
+.modal-close {
+  display: block;
+  float: right;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  background-color: #f7e296;
+  font-size: 0;
+  margin-top: 22px;
+  margin-right: 22px;
+}
+
+.modal-close::before, .modal-close::after {
+  content: "";
+  position: absolute;
+  right: 36px;
+  width: 31px;
+  height: 3px;
+  background-color: white;
+}
+
+.modal-close::before {
+transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-write-us form {
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+.name-and-email {
+  display: flex;
+}
+
+.field {
+  background-color: #f2f2f2;
+  border: 0;
+  padding-left: 16px;
+}
+
+.field-name, .field-email {
+  width: 360px;
+  min-height: 50px;
+  line-height: 50px;
+  vertical-align: center;
+}
+
+.field-text {
+  width: 760px;
+  min-height: 156px;
+  margin-top: 10px;
+  padding-top: 18px;
+}
+
+.modal-write-us input {
+  margin-top: 10px;
 }
