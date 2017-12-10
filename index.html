@@ -14,15 +14,13 @@
       <img src="img/logo.png" alt="Логотип Device">
     </a>
     <div class="header-top">
-      <div class="search">
-        <a href="#">Поиск по сайту</a>
-        <!-- Временно для верстки>
-        <form action="" method="post">
-          <input type="search" placeholder="Поиск по сайту">
-          <input type="submit" value="Найти">
+  
+        <form class="search" action="" method="post">
+          <input class="search-text" type="text" placeholder="Поиск по сайту">
+          <input class="search-button" type="submit" value="Найти">
         </form>
-        <-->
-      </div>
+
+
       <ul class="right-menu">
         <li>
           <a href="#">Войти</a>
@@ -36,28 +34,35 @@
       </ul>
     </div>
     <ul class="main-menu">
-      <li>
-        <a href="#">Каталог товаров</a>
-        <ul class="submenu hidden">
+      <li class="submenu-catalog">
+        <a class="submenu-opener" href="#">Каталог товаров</a>
+        <div class="submenu">
+        <ul class="submenu-one">
           <li>
             <a href="#">Виртуальная реальность</a>
           </li>
           <li>
+              <a href="#">Моноподы для селфи</a>
+            </li>
+            <li>
+                <a href="#">Экшн-камеры</a>
+              </li>
+              </ul>
+              <ul class="submenu-two">
+          <li>
             <a href="#">Фитнесс-браслеты</a>
           </li>
           <li>
+              <a href="#">Умные часы</a>
+            </li>
+          </ul>
+          <ul class="submenu-three">
+          <li>
             <a href="#">Квадрокоптеры</a>
-          </li>
-          <li>
-            <a href="#">Моноподы для селфи</a>
-          </li>
-          <li>
-            <a href="#">Умные часы</a>
-          </li>
-          <li>
-            <a href="#">Экшн-камеры</a>
-          </li>
-        </ul>
+          </li></ul>
+        </div>
+
+
       </li>
       <li>
         <a href="#">Доставка</a>
@@ -169,7 +174,7 @@
         </li>
         <li class="category-item">
           <a href="#">
-            <div class="category-item-background item-2">
+            <div class="category-item-background item-goods">
               <img src="img/icon-goods-monopod.svg">
             </div>
             <h3>Моноподы
@@ -282,7 +287,7 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <a href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687031,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618"><img src="img/map.jpg" alt="Москва, улица Строителей, 15" width="560" height="222"></a>
-        <a href="#" class="button">Напишите нам</a>
+        <a href="#" class="button modal-open">Напишите нам</a>
 
       </section>
     </div>
@@ -290,8 +295,6 @@
     <div class="modal modal-map">
       <img src="img/map-big.jpg">
     </div> -->
-
-  <a href="#" class="button modal-close">Напишите нам</a>
 
   <div class="modal modal-write-us">
     <button class="modal-close" type="button">Закрыть</button>
@@ -373,6 +376,7 @@
         </a>
       </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

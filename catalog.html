@@ -15,15 +15,11 @@
         <img src="img/logo.png" alt="Логотип Device">
       </a>
       <div class="header-top">
-        <div class="search">
-          <a href="#">Поиск по сайту</a>
-          <!-- Временно для верстки>
-      <form action="" method="post">
-        <input type="search" placeholder="Поиск по сайту">
-        <input type="submit" value="Найти">
-      </form>
-      <-->
-        </div>
+          <form class="search" action="" method="post">
+              <input class="search-text" type="text" placeholder="Поиск по сайту">
+              <input class="search-button" type="submit" value="Найти">
+            </form>
+    
         <ul class="right-menu">
           <li>
             <a href="#">Валентин Петухов</a>
@@ -40,40 +36,47 @@
         </ul>
       </div>
       <ul class="main-menu">
-        <li>
-          <a href="#">Каталог товаров</a>
-          <ul class="submenu hidden">
-            <li>
-              <a href="#">Виртуальная реальность</a>
-            </li>
-            <li>
-              <a href="#">Фитнесс-браслеты</a>
-            </li>
-            <li>
-              <a href="#">Квадрокоптеры</a>
-            </li>
-            <li>
-              <a href="#">Моноподы для селфи</a>
-            </li>
-            <li>
-              <a href="#">Умные часы</a>
-            </li>
-            <li>
-              <a href="#">Экшн-камеры</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Доставка</a>
-        </li>
-        <li>
-          <a href="#">Гарантия</a>
-        </li>
-        <li>
-          <a href="#">Контакты</a>
-        </li>
-      </ul>
-    </header>
+          <li class="submenu-catalog">
+            <a class="submenu-opener" href="#">Каталог товаров</a>
+            <div class="submenu">
+            <ul class="submenu-one">
+              <li>
+                <a href="#">Виртуальная реальность</a>
+              </li>
+              <li>
+                  <a href="#">Моноподы для селфи</a>
+                </li>
+                <li>
+                    <a href="#">Экшн-камеры</a>
+                  </li>
+                  </ul>
+                  <ul class="submenu-two">
+              <li>
+                <a href="#">Фитнесс-браслеты</a>
+              </li>
+              <li>
+                  <a href="#">Умные часы</a>
+                </li>
+              </ul>
+              <ul class="submenu-three">
+              <li>
+                <a href="#">Квадрокоптеры</a>
+              </li></ul>
+            </div>
+    
+    
+          </li>
+          <li>
+            <a href="#">Доставка</a>
+          </li>
+          <li>
+            <a href="#">Гарантия</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </header>
   </div>
   <main>
     <div class="container">
@@ -127,6 +130,8 @@
             <div class="scale"><div class="bar"></div></div>
             <div class="toggle toggle-min"></div>
             <div class="toggle toggle-max"></div>
+            <input type="text" name="price-min" id="price-min">
+            <input typre="text" name="price-max" id="price-max">
           </fieldset>
 
           <fieldset class="filter-color">
@@ -187,7 +192,7 @@
                 </div>
               <div class="product-text">
                 <a href="#" class="product-link">
-                  <h2>Профессиональная селфи-палка</h2>
+                  <h2>Профессиональная <br>селфи-палка</h2>
                 </a>
                 <p class="product-price">1500 руб.</p>
               </div>
@@ -209,7 +214,7 @@
             </div>
 
             <div class="product">
-
+              <span class="new">NEW</span>
               <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
               <div class="add-to-cart">
                   <button class="button add-to-cart-button">В корзину</button>
