@@ -60,7 +60,6 @@ body {
   padding: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
-  line-height: auto;
   font-weight: normal;
   color: #000000;
 }
@@ -151,9 +150,13 @@ body {
   z-index: 999;
   position: absolute;
   width: 1160px;
-  min-height: 150px;
+  min-height: 166px;
   left: -60px;
-  top: 25px;
+  top: 20px;
+}
+
+.submenu:hover {
+  display: flex;
 }
 
 .main-menu>li>a {
@@ -528,7 +531,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
-  margin-bottom: 109px;
+  margin-bottom: 111px;
 }
 
 #product-1:checked~#slide-1 {
@@ -557,8 +560,8 @@ body {
 
 .product .new {
   position: absolute;
-  top: 29px;
-  right: 22px;
+  top: 28px;
+  right: 26px;
   width: 60px;
   height: 60px;
   border: 2px solid black;
@@ -692,7 +695,7 @@ body {
 
 .service-text h3 {
   font-size: 47px;
-  letter-spacing: 0.47;
+  letter-spacing: 1px;
   margin-bottom: 29px;
 }
 
@@ -726,6 +729,7 @@ body {
   cursor: pointer;
   user-select: none;
   outline: none;
+  padding: 0;
 }
 
 .button-services label {
@@ -853,7 +857,7 @@ a.vive:hover {
 }
 
 .about-us {
-  width: 600px;
+  width: 598px;
 }
 
 .about-us h2 {
@@ -885,13 +889,29 @@ a.vive:hover {
 
 .delivery-partners {
   list-style: none;
-  margin-top: 77px;
+  margin-top: 76px;
   margin-bottom: 63px;
+  padding: 0;
+}
+
+
+
+.delivery-partners li::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/delivery-partners.svg);
+  background-repeat: no-repeat;
+  background-size: 18px;
+  margin-right: 20px;
+  margin-left: -4px;
 }
 
 .about-us li {
-  font-size: 15px;
-  margin-bottom: 25px;
+  font-size: 16px;
+  margin-bottom: 20px;
   font-weight: bold;
 }
 
@@ -1738,16 +1758,13 @@ a.vive:hover {
   line-height: 21.6px;
 }
 
-.footer-menu > a {
-  letter-spacing: 3.6px;
-}
 
 .footer-menu li:first-child {
-  margin-right: 45px;
+  margin-right: 38px;
 }
 
 .footer-menu li:nth-child(2) {
-  margin-right: 45px;
+  margin-right: 38px;
 }
 
 .footer-middle .phone {
@@ -1768,7 +1785,7 @@ a.vive:hover {
 
 .footer-menu a {
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .footer-bottom {
@@ -1874,7 +1891,7 @@ a.vive:hover {
 }
 
 .modal-open {
-  margin-bottom: 83px;
+  margin-bottom: 81px;
 }
 
 .modal-show {
