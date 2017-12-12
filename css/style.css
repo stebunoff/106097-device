@@ -600,7 +600,8 @@ body {
   background-image: url(../img/button-slider.svg);
 }
 
-.product .new {
+.product.new::before {
+  content: "NEW";
   position: absolute;
   top: 28px;
   right: 26px;
@@ -609,7 +610,6 @@ body {
   border: 2px solid black;
   border-radius: 50%;
   opacity: 0.1;
-  background-color: transparent;
   padding-left: 10px;
   padding-top: 19px;
   font-weight: bold;
@@ -1991,6 +1991,17 @@ a.vive:hover {
 
 .modal-show {
   display: block;
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .modal-write-us {
